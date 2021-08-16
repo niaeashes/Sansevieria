@@ -10,8 +10,8 @@ public class DecelerationProjector: Projector {
     public typealias DecelerationRate = UIScrollView.DecelerationRate
     #else
     public enum DecelerationRate: CGFloat {
-        case normal = 0.99
-        case fast = 0.998
+        case normal = 0.998
+        case fast = 0.99
     }
     #endif
 
