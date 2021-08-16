@@ -1,6 +1,5 @@
 //
 //  Projector.swift
-//  Reef2
 //
 
 import SwiftUI

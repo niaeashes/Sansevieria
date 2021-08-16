@@ -1,6 +1,5 @@
 //
 //  ProjectionAnimator.swift
-//  Reef2
 //
 
 import QuartzCore
