@@ -23,14 +23,10 @@ public final class ProjectionAnimator {
     }
 
     public func start() {
-        #if TARGET_OS_IPHONE
         let displayLink = CADisplayLink(target: self, selector: #selector(handleFrame(_:)))
         displayLink.add(to: .main, forMode: RunLoop.Mode.common)
         self.displayLink = displayLink
-        #endif
     }
-
-    #if TARGET_OS_IPHONE
 
     private weak var displayLink: CADisplayLink? = nil
 
@@ -46,8 +42,6 @@ public final class ProjectionAnimator {
         }
     }
 
-    #endif
-
     deinit {
         invalidate()
     }
@@ -55,8 +49,6 @@ public final class ProjectionAnimator {
     public func invalidate() {
         guard running else { return }
         running = false
-        #if TARGET_OS_IPHONE
         displayLink?.invalidate()
-        #endif
     }
 }
